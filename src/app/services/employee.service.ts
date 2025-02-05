@@ -13,4 +13,8 @@ export class EmployeeService {
   getEmployees(): Observable<Employee[]> {
     return this._httpClient.get<Employee[]>('http://localhost:3000/employees');
   }
+
+  addEmployee(employee: Employee): Observable<Employee> {
+    return this._httpClient.post<Employee>('http://localhost:3000/employees', employee);
+  }
 }

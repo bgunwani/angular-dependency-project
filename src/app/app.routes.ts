@@ -6,6 +6,7 @@ import { UsersComponent } from './users/users.component';
 import { UserDetailComponent } from './user-detail/user-detail.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { EmployeesComponent } from './employees/employees.component';
+import { AddEmployeeComponent } from './add-employee/add-employee.component';
 
 // Configuring Routes Here
 export const routes: Routes = [
@@ -15,6 +16,7 @@ export const routes: Routes = [
     { path: 'users', component: UsersComponent },
     { path: 'user-detail/:id/:name/:email', component: UserDetailComponent },
     { path: 'user-list', component: UserListComponent },
-    { path: 'employees', component: EmployeesComponent }
+    { path: 'employees', component: EmployeesComponent },
+    { path: 'add-employee', component: AddEmployeeComponent }
 
 ];
