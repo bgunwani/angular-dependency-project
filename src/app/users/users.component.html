@@ -1,0 +1,47 @@
+<h2>Manage Users</h2>
+
+<hr />
+
+<h4>Add New User</h4>
+<form>
+    <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" class="form-control" name="name" [(ngModel)]="user.name" [value]="existingUser.name" />
+    </div>
+    <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" name="email" [(ngModel)]="user.email" [value]="existingUser.email" />
+    </div>
+    <input type="button" (click)="addUser()" value="Add New User" class="btn btn-primary me-2" />
+    <input type="button" (click)="updateUser()" value="Update User" class="btn btn-secondary" />
+</form>
+
+<hr />
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>S.No.</th>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users; let i = index">
+            <td>{{i+1}}</td>
+            <td>{{ user.id }}</td>
+            <td>{{ user.name }}</td>
+            <td>{{ user.email }}</td>
+            <td>
+                <a class="btn btn-secondary me-2"
+                    [routerLink]="['/user-detail', user.id, user.name, user.email]">View</a>
+                <!-- <a class="btn btn-secondary me-2" [routerLink]="['/user-detail']"
+                    [queryParams]="{ id: user.id, name: user.name}">View</a> -->
+                <button class="btn btn-primary me-2" (click)="editUser(i)">Edit</button>
+                <button class="btn btn-danger" (click)="deleteUser(i)">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
