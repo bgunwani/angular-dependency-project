@@ -1,0 +1,22 @@
+{
+    "employees": [
+        {
+            "id": 101,
+            "name": "Gautam Bhalla",
+            "salary": 20000,
+            "designation": "Manager"
+        },
+        {
+            "id": 102,
+            "name": "Karthik Sharma",
+            "salary": 43000,
+            "designation": "Senior Manager"
+        },
+        {
+            "id": 103,
+            "name": "Sumit Dhawan",
+            "salary": 40000,
+            "designation": "SMO Expert"
+        }
+    ]
+}
